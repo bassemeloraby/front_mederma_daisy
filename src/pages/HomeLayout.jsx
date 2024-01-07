@@ -7,7 +7,7 @@ const HomeLayout = () => {
       <nav>
         <span className="text-4xl text-primary">MEDERMA</span>
       </nav>
-      <Outlet/>
+      <Outlet />
     </Fragment>
   );
 };
