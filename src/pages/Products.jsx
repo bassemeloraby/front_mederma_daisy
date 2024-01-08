@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import { ComplexPaginationContainer, Filters, ProductsContainer } from '../components'
 
 const Products = () => {
   return (
-    <div>Products</div>
+    <Fragment>
+    <Filters />
+   <ProductsContainer/>
+   <ComplexPaginationContainer/>
+  </Fragment>
   )
 }
 
