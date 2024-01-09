@@ -7,14 +7,12 @@ import {
   HomeLayout,
   Landing,
   Login,
-  Products,
-  SingleProduct,
 } from "./pages";
 
 import { ErrorElement } from "./components";
 
 // loaders
-import { loader as productsLoader } from './pages/Products';
+import { loader as drugsLoader } from './pages/Drugs';
 
 
 const router = createBrowserRouter([
@@ -29,20 +27,10 @@ const router = createBrowserRouter([
         errorElement: <ErrorElement />,
       },
       {
-        path: "products",
-        element: <Products />,
-        errorElement: <ErrorElement />,
-        loader: productsLoader,
-      },
-      {
-        path: "products/:id",
-        element: <SingleProduct />,
-        errorElement: <ErrorElement />,
-      },
-      {
         path: "drugs/",
         element: < Drugs/>,
         errorElement: <ErrorElement />,
+        loader: drugsLoader,
       },
       { path: "about", element: <About /> },
     ],

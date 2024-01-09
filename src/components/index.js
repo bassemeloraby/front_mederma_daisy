@@ -6,8 +6,5 @@ export { default as Hero } from './Hero';
 export { default as ErrorElement } from './ErrorElement';
 export { default as SectionTitle } from './SectionTitle';
 export { default as Filters } from './Filters';
-export { default as ProductsContainer } from './ProductsContainer';
-export { default as PaginationContainer } from './PaginationContainer';
-export { default as ComplexPaginationContainer } from './ComplexPaginationContainer';
 export { default as Loading } from './Loading';
 export { default as DrugsList } from './DrugsList';
