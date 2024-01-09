@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import {
   About,
+  Drugs,
   Error,
   HomeLayout,
   Landing,
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
       {
         path: "products/:id",
         element: <SingleProduct />,
+        errorElement: <ErrorElement />,
+      },
+      {
+        path: "drugs/",
+        element: < Drugs/>,
         errorElement: <ErrorElement />,
       },
       { path: "about", element: <About /> },
