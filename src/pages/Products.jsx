@@ -9,13 +9,14 @@ import { customFetch } from "../utils";
 const url = "/allDrugs";
 
 export const loader = async ({ request }) => {
-  const response = await customFetch(url);
+  // const response = await customFetch(url);
   const products = response.data;
+  const pageCount = products.length / 100
   const meta = {
     pagination: {
       page: 1,
       pageSize: 10,
-      pageCount: 3,
+      pageCount: pageCount,
       total: products.length,
     },
   };
