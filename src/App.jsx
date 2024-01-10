@@ -7,12 +7,14 @@ import {
   HomeLayout,
   Landing,
   Login,
+  SingleDrug,
 } from "./pages";
 
 import { ErrorElement } from "./components";
 
 // loaders
 import { loader as drugsLoader } from './pages/Drugs';
+import { loader as SingleDrugLoader } from './pages/SingleDrug';
 
 
 const router = createBrowserRouter([
@@ -27,10 +29,16 @@ const router = createBrowserRouter([
         errorElement: <ErrorElement />,
       },
       {
-        path: "drugs/",
+        path: "drugs",
         element: < Drugs/>,
         errorElement: <ErrorElement />,
         loader: drugsLoader,
+      },
+      {
+        path: "drugs/:id",
+        element: < SingleDrug/>,
+        errorElement: <ErrorElement />,
+        loader: SingleDrugLoader,
       },
       { path: "about", element: <About /> },
     ],
