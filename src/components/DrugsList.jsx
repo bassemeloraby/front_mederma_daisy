@@ -1,15 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLoaderData } from 'react-router-dom';
 import { Virtuoso } from "react-virtuoso";
 import noPhoto from "../assets/noPhoto.jpg"
-const DrugsList = () => {
+const DrugsList = ({query}) => {
   const { products } = useLoaderData();
+
+  const [items, setItems] = useState([]);
+
+
+  useEffect(() => {
+    if (!query) setItems(products);
+    setItems((_) =>
+    products.filter(
+        (x) =>
+          x.ScientificName.toLowerCase().includes(query?.toLowerCase()) ||
+          x.TradeName.toLowerCase().includes(query?.toLowerCase())
+      )
+    );
+  }, [query, products]);
+
+  useEffect(() => {
+    setItems(products);
+  }, [products]);
+
+ 
 
   return (
     <div className='mt-12 grid gap-y-8'>
     <Virtuoso
     style={{ height: "600px", background: "#f8f8f8" }}
-    data={products}
+    data={items}
     totalCount={products.length}
     itemContent={(index, product) => (
       
