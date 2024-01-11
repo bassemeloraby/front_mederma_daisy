@@ -1,7 +1,8 @@
-import axios from 'axios';
+import axios from "axios";
 
-const productionUrl = 'https://rich-blue-llama-vest.cyclic.cloud/api';
+const productionUrl = "https://rich-blue-llama-vest.cyclic.cloud/api";
 
 export const customFetch = axios.create({
-    baseURL: productionUrl,
-  });
+  baseURL: productionUrl,
+  // headers: { "Access-Control-Allow-Origin": true },
+});

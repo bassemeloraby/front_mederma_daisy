@@ -27,10 +27,19 @@ const SingleDrug = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/products">Products</Link>
+            <Link to="/drugs">Drugs</Link>
           </li>
         </ul>
       </div>
+      {/*buttons */}
+      <div className='mt-10'>
+      <Link to={`/drugs/${ScientificName}`} className='btn btn-primary m-2'>
+      ScientificName
+      </Link>
+      <Link to='/drugs' className='btn btn-primary m-2'>
+        Our Products
+      </Link>
+    </div>
       {/* PRODUCT */}
       <div className="mt-6 grid gap-y-8 lg:grid-cols-2  lg:gap-x-16">
         {" "}
@@ -49,6 +58,7 @@ const SingleDrug = () => {
 
           <p className="mt-3 text-xl">{PublicPrice} SR</p>
         </div>
+        
       </div>
     </section>
   );

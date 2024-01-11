@@ -7,6 +7,7 @@ import {
   HomeLayout,
   Landing,
   Login,
+  ScientificName,
   SingleDrug,
 } from "./pages";
 
@@ -15,6 +16,7 @@ import { ErrorElement } from "./components";
 // loaders
 import { loader as drugsLoader } from './pages/Drugs';
 import { loader as SingleDrugLoader } from './pages/SingleDrug';
+import { loader as ScientificNameLoader } from './pages/ScientificName';
 
 
 const router = createBrowserRouter([
@@ -39,6 +41,12 @@ const router = createBrowserRouter([
         element: < SingleDrug/>,
         errorElement: <ErrorElement />,
         loader: SingleDrugLoader,
+      },
+      {
+        path: "drugs/:ScientificName",
+        element: < ScientificName/>,
+        errorElement: <ErrorElement />,
+        loader: ScientificNameLoader,
       },
       { path: "about", element: <About /> },
     ],
