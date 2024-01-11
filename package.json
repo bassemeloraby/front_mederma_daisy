@@ -1,7 +1,7 @@
 {
   "name": "my-project",
   "private": true,
-  "proxy":"https://rich-blue-llama-vest.cyclic.cloud/api",
+  "proxy":"https://rich-blue-llama-vest.cyclic.cloud/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
