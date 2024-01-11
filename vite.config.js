@@ -8,7 +8,7 @@ export default defineConfig({
     "/api": {
       ws: true,
       changeOrigin: true,
-      target: "https://rich-blue-llama-vest.cyclic.cloud"
+      target: "https://rich-blue-llama-vest.cyclic.cloud/api"
     }
   }
 })
